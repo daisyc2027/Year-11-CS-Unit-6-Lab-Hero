@@ -83,10 +83,13 @@ public class Hero {
         while (opponent.getHitPoints() > 0 && this.hitPoints > 0) {
             attack(opponent);
             System.out.println(opponent.getName() + ": " + opponent.getHitPoints() + this.name + ": " + hitPoints);
-            wait(1000);
+            Helper helper = new Helper();
+            Helper.wait(1000);
         }
     }
+}
 
+class Helper{
     public static void wait(int ms) {
         try {
             Thread.sleep(ms);
